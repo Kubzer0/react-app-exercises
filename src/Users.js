@@ -17,7 +17,17 @@ class Users extends React.Component {
         return (
             <div>
                 {
-                    this.state.users
+                    this.state.users ?
+                        this.state.users.map ?
+                            this.state.users.map(user => (
+                                <div>
+                                    {user.name.first} {user.name.last}
+                                </div>
+                            ))
+                            :
+                            'error'
+                        :
+                        'ładowanie'
                 }
             </div>
         )
