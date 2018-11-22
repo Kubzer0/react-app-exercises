@@ -39,16 +39,17 @@ class Counter extends React.Component {
                 >
                     -
                 </button>
-
-                {this.state.currentNumber === 10  ? (
+                <div>
+                {(this.state.currentNumber === this.props.minValue ||
+                this.state.currentNumber === this.props.maxValue)
+                ? 
                 <h1>
                     przekroczony zakres
                 </h1>
-                )
                 :
                  null 
                 }
-
+                </div>
 
             </div>
         )
