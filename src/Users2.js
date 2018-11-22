@@ -7,7 +7,7 @@ class Users2 extends React.Component {
     }
 
     componentDidMount() {
-        fetch('https://randomuser.me/api?/results=5')
+        fetch('https://randomuser.me/api/?results=5')
             .then(response => response.json())
             .then(data => this.setState({ users: data.results }))
     }
