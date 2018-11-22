@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Counter from './Counter'
+import Form from './Form'
 
 const App = () => (
   <div>
@@ -9,6 +10,7 @@ const App = () => (
       maxValue={10}
       minValue={-10}
     />
+    <Form />
   </div>
 )
 
