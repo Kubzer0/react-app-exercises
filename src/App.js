@@ -5,6 +5,7 @@ import Counter from './Counter'
 import Form from './Form'
 import Form2 from './Form2'
 import Users from './Users'
+import Users2 from './Users2'
 
 const App = () => (
   <MuiThemeProvider>
@@ -17,6 +18,7 @@ const App = () => (
       <Form />
       <Form2 />
       <Users />
+      <Users2 />
     </div>
   </MuiThemeProvider>
 )
