@@ -1,6 +1,7 @@
 import React from 'react'
+import TextField from 'material-ui/TextField'
 
-class Form extends React.Component {
+class Form2 extends React.Component {
     state = {
         text: 'initial value'
     }
@@ -8,16 +9,18 @@ class Form extends React.Component {
     render() {
         return (
             <div>
-                <h1>
-                    {this.state.text}
-                </h1>
-                <input
+                <TextField
                     type='text'
                     value = {this.state.text}
                     onChange={(event) => this.setState({text: event.target.value})}
+                />
+                <TextField
+                    type='text'
+                    value = {this.state.text}
+                    readOnly= {true}
                 />
             </div>
         )
     }
 }
-export default Form
+export default Form2
