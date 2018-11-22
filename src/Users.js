@@ -7,7 +7,7 @@ class Users extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`https://randomuser.me/api`)
+        fetch(`https://randomuser.me/api/?results=${this.props.numberOfResults}`)
             .then((response) => response.json())
             .then((data) => this.setState({ users: data.results })
             )
@@ -20,7 +20,9 @@ class Users extends React.Component {
                     this.state.users ?
                         this.state.users.map ?
                             this.state.users.map(user => (
-                                <div>
+                                <div
+                                    key={user.login.uuid}
+                                >
                                     {user.name.first} {user.name.last}
                                 </div>
                             ))
@@ -33,5 +35,7 @@ class Users extends React.Component {
         )
     }
 }
+
+Users.defaultProps = { numberOfResults: 10 }
 
 export default Users
