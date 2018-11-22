@@ -40,11 +40,15 @@ class Counter extends React.Component {
                     -
                 </button>
                 <div>
-                {(this.state.currentNumber === this.props.minValue ||
-                this.state.currentNumber === this.props.maxValue)
-                ? 
+                {this.state.currentNumber === this.props.minValue ?
+                  <h1>
+                  przekroczony zakres dolny
+                </h1> :
+
+                this.state.currentNumber === this.props.maxValue
+                ?
                 <h1>
-                    przekroczony zakres
+                  przekroczony zakres górny
                 </h1>
                 :
                  null 
