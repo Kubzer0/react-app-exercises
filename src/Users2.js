@@ -19,10 +19,12 @@ class Users2 extends React.Component {
                 {
                     this.state.users &&
                     this.state.users.map((user) => (
-                        <div>
-                           {user.email}
+                        <div
+                            key={user.email}
+                        >
+                            {user.email}
                         </div>
-                        
+
                     ))
                 }
             </div>
